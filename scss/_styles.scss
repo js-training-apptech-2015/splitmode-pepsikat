@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+body {
+    font: 100% Arial, Helvetica, sans-serif;
+    background: #FAFAFA;
+    color: #403740;
+    @include display-flex;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+}
+
+.menu {
+    background-color: $color-blue;
+    @include box-shadow(0px 2px 5px rgba(0, 0, 0, 0.26));
+    color: white;
+    .menu-btn {
+        color: #FFF;
+        font-size: 120%;
+        font-weight: 400;
+        line-height: 64px;
+        white-space: nowrap;
+        padding: 0 20px;
+        display: inline-block;
+        cursor: pointer;
+        @include transition(all 0.5s);
+        &:hover {
+            background: #C2185B;
+        }
+    }
+}
+
+.game {
+    font-size: 0;
+    width: $cell-size * 3;
+    height: $cell-size * 3;
+    margin: 20px auto;
+    @include box-shadow(0px 2px 5px rgba(#000, 0.26));
+    .game-cell {
+        height: $cell-size;
+        width: $cell-size;
+        display: block;
+        float: left;
+        line-height: $cell-size;
+        text-align: center;
+        border-width: 1px;
+        border-style: solid;
+        border-color: transparent $color-grey $color-grey transparent;
+        font-size: 60px;
+        cursor: pointer;
+        &:nth-of-type(3n) {
+            border-right-color: transparent;
+        }
+        &:nth-of-type(n + 7) {
+            border-bottom-color: transparent;
+        }
+        &:hover {
+            @include background(radial-gradient(#fff, #eee));
+        }
+    }
+}
+
+.score {
+    line-height: 64px;
+    width: 100%;
+    text-align: center;
+    background: $color-purple;
+    color: #fff;
+    @include align-self(flex-end);
+    .score-name {
+        font-size: 200%;
+        &.active{
+            color: #ff0;
+        }
+    }
+    .score-num {
+        font-size: 300%;
+        width: 1.3em;
+        height: 1.3em;
+        display: inline-block;
+    }
+}
+
+.material-icons{
+    vertical-align: middle;
+}

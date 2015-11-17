@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>tic tac toe</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="menu">
+        <span class="menu-btn" id="new-game" onclick="newGame([0, 0]);"><i class="material-icons">autorenew</i> New game</span>
+        <span class="menu-btn" id="mode"><i class="material-icons">settings</i> Mode</span>
+    </div>
+
+    <div class="game">
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+        <div class="game-cell"></div>
+    </div>
+
+    <div class="score">
+        <span class="score-name active">You</span>
+        <span class="score-num" id="score-user">1</span> :
+        <span class="score-num" id="score-cpu">1</span>
+        <span class="score-name">CPU</span>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
